@@ -1,0 +1,113 @@
+<!doctype html>
+<!-- COVCHECK.html			The Body Pillows -->
+<!-- This is a web page that checks for COVID. -->
+<!-- ========================================= -->
+
+<html>
+<head>
+	<style type="text/css">
+	</style>
+	<title>COVID CHECK</title>
+	
+	<script type="text/javascript">
+
+		function COVCHECK(){
+			var noQ1= document.getElementById("noQuestion1").checked;
+			var noQ2= document.getElementById("noQuestion2").checked;
+			var noQ3= document.getElementById("noQuestion3").checked;
+			
+				if (noQ1 && noQ2 && noQ3) 
+				{
+					alert('Safe to go to work. Show this confirmation message at your facility entry point.')
+					
+				}
+				else 
+				{
+					alert("Please call the COVCHECK Hotline at 1(800)437-5555 for proper isolation tips. Please get checked at your local clinic before coming to work.")
+				}
+				
+		}
+
+	</script>
+		
+</head>
+<body>
+	
+	<h2 style="background-color:#D3D3D3; text-align: center">COVID-19 CHECK</h2>
+
+		<div style="background-color:#E0FFFF;">
+			<p style="text-align: center"> Select "yes" or "no" to the following questions: </p>
+			<p>
+			1) Have you experienced any of the following symptoms in the past 48 hours:
+	
+			<ul> 
+				<li>fever or chills</li>
+				<li>cough</li>
+				<li>shortness of breath or difficulty breathing</li>
+				<li>fatigue</li>
+				<li>muscle or body aches</li>
+				<li>headache</li>
+				<li>new loss of taste or smell</li>
+				<li>sore throat</li>
+				<li>congestion or runny nose</li>
+				<li>nausea or vomiting</li>
+				<li>diarrhea</li>
+
+
+			</ul>
+
+			<ul>
+			<input id="yesQuestion1" type="radio" name="response1" value="yes">
+			<label for="yesQuestion1">Yes</label>
+			<br>
+
+			<input id="noQuestion1" type="radio" name="response1" value="no">
+			<label for="noQuestion1">No</label>
+			<br>
+
+			</ul>
+
+	</p>
+
+	<p>
+		2) Have you had prolonged, close contact (6 feet or less, for 15 minutes or longer) with a<br>Confirmed covid-19 positive patient or co-worker while NOT wearing a respirator/face mask<br>and NOT wearing eye protection (e.g. goggles or face shield)?<br>
+		<br>
+			<ul>
+			<input id="yesQuestion2" type="radio" name="response2" value="yes">
+			<label for="yesQuestion2">Yes</label>
+			<br>
+			<input id="noQuestion2" type="radio" name="response2"value="no">
+			<label for="noQuestion2">No</label>
+			<br>
+
+			</ul>
+
+	</p>
+
+	<p>
+		3) Have you had prolonged close contact (6 feet or less, for 15 minutes or longer) with a <br>Confirmed COVID 19 positive person were NOT wearing a face mask?<br>
+		<br>
+			<ul>
+			<input id="yesQuestion3" type="radio" name="response3"value="yes">
+			<label for="yesQuestion3">Yes</label>
+			<br>
+			<input id="noQuestion3" type="radio" name="response3"value="no">
+			<label for="noQuestion3">No</label>
+			<br>
+
+			</ul>
+
+	</p>
+		</div>
+			<div style="text-align: center">
+				<button onclick="COVCHECK()">Submit</button>
+			</div>
+			
+			<div id="outputDiv"></div>
+
+			<div id="successMessage">
+  					
+			</div>
+
+</body>
+</html>
